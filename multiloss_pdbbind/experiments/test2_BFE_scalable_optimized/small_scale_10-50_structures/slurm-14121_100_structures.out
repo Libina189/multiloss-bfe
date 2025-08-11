@@ -1,0 +1,219 @@
+Starting job at Tue Aug  5 17:54:10 PDT 2025
+Working directory: /home/lthoma21/BFE-Loss-Function
+Python version: Python 3.10.11
+/var/spool/slurmd/job14121/slurm_script: line 18: nvidia-smi: command not found
+GPU information: nvidia-smi not available
+2025-08-05 17:54:12.459021: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-08-05 17:54:12.529913: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+No normalization for SPS. Feature removed!
+No normalization for AvgIpc. Feature removed!
+No normalization for NumAmideBonds. Feature removed!
+No normalization for NumAtomStereoCenters. Feature removed!
+No normalization for NumBridgeheadAtoms. Feature removed!
+No normalization for NumHeterocycles. Feature removed!
+No normalization for NumSpiroAtoms. Feature removed!
+No normalization for NumUnspecifiedAtomStereoCenters. Feature removed!
+No normalization for Phi. Feature removed!
+Skipped loading modules with pytorch-geometric dependency, missing a dependency. No module named 'torch_geometric'
+Skipped loading modules with transformers dependency. No module named 'transformers'
+cannot import name 'HuggingFaceModel' from 'deepchem.models.torch_models' (/home/lthoma21/.local/lib/python3.10/site-packages/deepchem/models/torch_models/__init__.py)
+Skipped loading modules with pytorch-geometric dependency, missing a dependency. cannot import name 'DMPNN' from 'deepchem.models.torch_models' (/home/lthoma21/.local/lib/python3.10/site-packages/deepchem/models/torch_models/__init__.py)
+Skipped loading modules with pytorch-lightning dependency, missing a dependency. No module named 'lightning'
+Skipped loading some Jax models, missing a dependency. No module named 'jax'
+2025-08-05 17:54:29.827655: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/calstatela/amber-22/amber22/lib:/opt/rh/gcc-toolset-11/root/usr/lib64:/opt/rh/gcc-toolset-11/root/usr/lib:/opt/rh/gcc-toolset-11/root/usr/lib64/dyninst:/opt/rh/gcc-toolset-11/root/usr/lib/dyninst:/opt/nvidia/cuda/cuda-11.6/lib64
+2025-08-05 17:54:29.829821: W tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:265] failed call to cuInit: UNKNOWN ERROR (303)
+2025-08-05 17:54:29.832178: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (node06.cluster): /proc/driver/nvidia/version does not exist
+2025-08-05 17:54:29.834771: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Starting PGGCN training script...
+Loading data...
+    Unnamed: 0 complex-name  ...  enthalpy-gb     entropy
+0            0         10gs  ...     -42.9160  -34.074073
+1            1         1a1e  ...       3.2581   11.547406
+2            2         1a30  ...     148.3394  154.280070
+3            3         1a4k  ...     -32.0256  -20.973192
+4            4         1a4r  ...     -35.4041  -26.202970
+5            5         1a4w  ...     -23.3028  -15.124018
+6            6         1a69  ...     -17.5672  -10.244979
+7            8         1a94  ...     109.9767  120.821876
+8            9         1a99  ...     -45.2586  -37.383759
+9           10         1a9m  ...      42.8557   52.416033
+10          11         1aaq  ...      35.2486   46.853629
+11          12         1add  ...     167.0772  176.388854
+12          13         1adl  ...     -32.0068  -24.601686
+13          14         1ado  ...     120.0073  128.296606
+14          15         1afk  ...      -6.7844    2.361468
+15          16         1afl  ...      -8.9886   -0.312459
+16          17         1ai4  ...     -10.9636   -7.509722
+17          18         1ai5  ...     -23.0420  -17.902630
+18          19         1ai7  ...      -9.3781   -3.727556
+19          20         1aid  ...     -10.3992   -3.740124
+20          21         1aj7  ...     -11.2800   -5.933397
+21          22         1ajn  ...     -11.9525   -8.319021
+22          23         1ajp  ...       1.4820    4.562859
+23          24         1ajq  ...     -21.6259  -15.671415
+24          25         1ajv  ...       1.6727   12.338274
+25          26         1ajx  ...      11.1352   22.063269
+26          27         1alw  ...      -2.5929    6.414813
+27          28         1amw  ...      -0.1619    6.110342
+28          29         1apv  ...      28.2675   40.701459
+29          30         1atl  ...      84.1252   92.801341
+30          31         1avn  ...       0.3395    5.727549
+31          32         1ax0  ...      -5.6867   -1.362445
+32          33         1b05  ...     -24.7065  -14.869856
+33          34         1b0h  ...     -33.0657  -23.809308
+34          35         1b1h  ...     -26.6346  -16.922296
+35          36         1b2h  ...     -47.1990  -40.926758
+36          37         1b32  ...     -61.8219  -52.012888
+37          38         1b3f  ...     -27.0813  -17.562413
+38          39         1b3g  ...      -7.4182    1.838192
+39          40         1b3h  ...     -23.5693  -14.989868
+40          41         1b3l  ...     -25.6363  -17.498964
+41          42         1b40  ...     -36.2258  -26.168108
+42          43         1b46  ...     -25.8032  -18.508610
+43          44         1b4h  ...      -1.4251    6.118169
+44          45         1b4z  ...     -57.5863  -50.360788
+45          46         1b51  ...     -44.1889  -34.006869
+46          47         1b52  ...     -40.0695  -30.232856
+47          48         1b55  ...     -13.5724   -3.348922
+48          49         1b57  ...      42.8996   53.952008
+49          50         1b58  ...     -54.1543  -45.049879
+
+[50 rows x 35 columns]
+Filtered dataframe length: 50
+Filtered PDBs count: 50
+Filtered PDBs: {'10gs': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ad940>, '1a1e': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac6d0>, '1a30': <rdkit.Chem.rdchem.Mol object at 0x153f1d7adda0>, '1a4k': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac590>, '1a4r': <rdkit.Chem.rdchem.Mol object at 0x153f1d7adf80>, '1a4w': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac130>, '1a69': <rdkit.Chem.rdchem.Mol object at 0x153f1d7af330>, '1a94': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae0c0>, '1a99': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ad210>, '1a9m': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac4f0>, '1aaq': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ada80>, '1add': <rdkit.Chem.rdchem.Mol object at 0x153f1d7af010>, '1adl': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae7a0>, '1ado': <rdkit.Chem.rdchem.Mol object at 0x153f1d7aca90>, '1afk': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ad0d0>, '1afl': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ad2b0>, '1ai4': <rdkit.Chem.rdchem.Mol object at 0x153f1d7a7d30>, '1ai5': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac770>, '1ai7': <rdkit.Chem.rdchem.Mol object at 0x153f1d7af470>, '1aid': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae840>, '1aj7': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac950>, '1ajn': <rdkit.Chem.rdchem.Mol object at 0x153f1d7af3d0>, '1ajp': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac9f0>, '1ajq': <rdkit.Chem.rdchem.Mol object at 0x153f1d7a7bf0>, '1ajv': <rdkit.Chem.rdchem.Mol object at 0x153f1d7a7ab0>, '1ajx': <rdkit.Chem.rdchem.Mol object at 0x153f1d7a7970>, '1alw': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ad710>, '1amw': <rdkit.Chem.rdchem.Mol object at 0x153f1d7af0b0>, '1apv': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae700>, '1atl': <rdkit.Chem.rdchem.Mol object at 0x153f1d7af150>, '1avn': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae340>, '1ax0': <rdkit.Chem.rdchem.Mol object at 0x153f1d7aec00>, '1b05': <rdkit.Chem.rdchem.Mol object at 0x153f1d7af1f0>, '1b0h': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae520>, '1b1h': <rdkit.Chem.rdchem.Mol object at 0x153f1d7aede0>, '1b2h': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ace50>, '1b32': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac810>, '1b3f': <rdkit.Chem.rdchem.Mol object at 0x153f1d7a78d0>, '1b3g': <rdkit.Chem.rdchem.Mol object at 0x153f1d7acc70>, '1b3h': <rdkit.Chem.rdchem.Mol object at 0x153f1d7a7a10>, '1b3l': <rdkit.Chem.rdchem.Mol object at 0x153f1d7af290>, '1b40': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac630>, '1b46': <rdkit.Chem.rdchem.Mol object at 0x153f1d7a7dd0>, '1b4h': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae8e0>, '1b4z': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae5c0>, '1b51': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ad670>, '1b52': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae020>, '1b55': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ae200>, '1b57': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ac1d0>, '1b58': <rdkit.Chem.rdchem.Mol object at 0x153f1d7ad350>}
+Preparing features...
+Processing PDB 1/50: 10gs
+Processing PDB 2/50: 1a1e
+Processing PDB 3/50: 1a30
+Processing PDB 4/50: 1a4k
+Processing PDB 5/50: 1a4r
+Processing PDB 6/50: 1a4w
+Processing PDB 7/50: 1a69
+Processing PDB 8/50: 1a94
+Processing PDB 9/50: 1a99
+Processing PDB 10/50: 1a9m
+Processing PDB 11/50: 1aaq
+Processing PDB 12/50: 1add
+Processing PDB 13/50: 1adl
+Processing PDB 14/50: 1ado
+Processing PDB 15/50: 1afk
+Processing PDB 16/50: 1afl
+Processing PDB 17/50: 1ai4
+Processing PDB 18/50: 1ai5
+Processing PDB 19/50: 1ai7
+Processing PDB 20/50: 1aid
+Processing PDB 21/50: 1aj7
+Processing PDB 22/50: 1ajn
+Processing PDB 23/50: 1ajp
+Processing PDB 24/50: 1ajq
+Processing PDB 25/50: 1ajv
+Processing PDB 26/50: 1ajx
+Processing PDB 27/50: 1alw
+Processing PDB 28/50: 1amw
+Processing PDB 29/50: 1apv
+Processing PDB 30/50: 1atl
+Processing PDB 31/50: 1avn
+Processing PDB 32/50: 1ax0
+Processing PDB 33/50: 1b05
+Processing PDB 34/50: 1b0h
+Processing PDB 35/50: 1b1h
+Processing PDB 36/50: 1b2h
+Processing PDB 37/50: 1b32
+Processing PDB 38/50: 1b3f
+Processing PDB 39/50: 1b3g
+Processing PDB 40/50: 1b3h
+Processing PDB 41/50: 1b3l
+Processing PDB 42/50: 1b40
+Processing PDB 43/50: 1b46
+Processing PDB 44/50: 1b4h
+Processing PDB 45/50: 1b4z
+Processing PDB 46/50: 1b51
+Processing PDB 47/50: 1b52
+Processing PDB 48/50: 1b55
+Processing PDB 49/50: 1b57
+Processing PDB 50/50: 1b58
+Max atoms: 11038, Max features: 53
+Training set: 40, Testing set: 10
+---------- Hyperparameter combinations ------------
+Epoch: 100, physics_weight: 2e-06
+Starting training...
+Epoch 1/100
+WARNING:tensorflow:From /opt/calstatela/mambaforge/lib/python3.10/site-packages/tensorflow/python/autograph/pyct/static_analysis/liveness.py:83: Analyzer.lamba_check (from tensorflow.python.autograph.pyct.static_analysis.liveness) is deprecated and will be removed after 2023-09-23.
+Instructions for updating:
+Lambda fuctions will be no more assumed to be used in the statement where they are used, or at least in the same block. https://github.com/tensorflow/tensorflow/issues/56089
+Inside call
+Inside call
+1/1 [==============================] - ETA: 0s - loss: 49.76341/1 [==============================] - 72s 72s/step - loss: 49.7634
+Epoch 2/100
+1/1 [==============================] - ETA: 0s - loss: 36.35691/1 [==============================] - 26s 26s/step - loss: 36.3569
+Epoch 3/100
+1/1 [==============================] - ETA: 0s - loss: 37.33891/1 [==============================] - 24s 24s/step - loss: 37.3389
+Epoch 4/100
+1/1 [==============================] - ETA: 0s - loss: 37.93861/1 [==============================] - 26s 26s/step - loss: 37.9386
+Epoch 5/100
+1/1 [==============================] - ETA: 0s - loss: 37.02371/1 [==============================] - 26s 26s/step - loss: 37.0237
+Epoch 6/100
+1/1 [==============================] - ETA: 0s - loss: 36.18601/1 [==============================] - 27s 27s/step - loss: 36.1860
+Epoch 7/100
+1/1 [==============================] - ETA: 0s - loss: 36.25581/1 [==============================] - 29s 29s/step - loss: 36.2558
+Epoch 8/100
+1/1 [==============================] - ETA: 0s - loss: 36.77141/1 [==============================] - 29s 29s/step - loss: 36.7714
+Epoch 9/100
+1/1 [==============================] - ETA: 0s - loss: 36.89321/1 [==============================] - 28s 28s/step - loss: 36.8932
+Epoch 10/100
+1/1 [==============================] - ETA: 0s - loss: 36.51931/1 [==============================] - 28s 28s/step - loss: 36.5193
+Epoch 11/100
+1/1 [==============================] - ETA: 0s - loss: 36.07381/1 [==============================] - 27s 27s/step - loss: 36.0738
+Epoch 12/100
+1/1 [==============================] - ETA: 0s - loss: 35.94331/1 [==============================] - 28s 28s/step - loss: 35.9433
+Epoch 13/100
+1/1 [==============================] - ETA: 0s - loss: 36.13141/1 [==============================] - 29s 29s/step - loss: 36.1314
+Epoch 14/100
+1/1 [==============================] - ETA: 0s - loss: 36.31511/1 [==============================] - 28s 28s/step - loss: 36.3151
+Epoch 15/100
+1/1 [==============================] - ETA: 0s - loss: 36.25451/1 [==============================] - 28s 28s/step - loss: 36.2545
+Epoch 16/100
+1/1 [==============================] - ETA: 0s - loss: 36.00651/1 [==============================] - 29s 29s/step - loss: 36.0065
+Epoch 17/100
+1/1 [==============================] - ETA: 0s - loss: 35.79461/1 [==============================] - 27s 27s/step - loss: 35.7946
+Epoch 18/100
+1/1 [==============================] - ETA: 0s - loss: 35.77111/1 [==============================] - 28s 28s/step - loss: 35.7711
+Epoch 19/100
+1/1 [==============================] - ETA: 0s - loss: 35.87801/1 [==============================] - 28s 28s/step - loss: 35.8780
+Epoch 20/100
+1/1 [==============================] - ETA: 0s - loss: 35.93961/1 [==============================] - 28s 28s/step - loss: 35.9396
+Epoch 21/100
+1/1 [==============================] - ETA: 0s - loss: 35.85891/1 [==============================] - 28s 28s/step - loss: 35.8589
+Epoch 22/100
+1/1 [==============================] - ETA: 0s - loss: 35.70091/1 [==============================] - 26s 26s/step - loss: 35.7009
+Epoch 23/100
+1/1 [==============================] - ETA: 0s - loss: 35.59461/1 [==============================] - 28s 28s/step - loss: 35.5946
+Epoch 24/100
+1/1 [==============================] - ETA: 0s - loss: 35.59891/1 [==============================] - 29s 29s/step - loss: 35.5989
+Epoch 25/100
+1/1 [==============================] - ETA: 0s - loss: 35.65201/1 [==============================] - 28s 28s/step - loss: 35.6520
+Epoch 26/100
+1/1 [==============================] - ETA: 0s - loss: 35.65191/1 [==============================] - 26s 26s/step - loss: 35.6519
+Epoch 27/100
+1/1 [==============================] - ETA: 0s - loss: 35.57231/1 [==============================] - 28s 28s/step - loss: 35.5723
+Epoch 28/100
+1/1 [==============================] - ETA: 0s - loss: 35.47321/1 [==============================] - 29s 29s/step - loss: 35.4732
+Epoch 29/100
+1/1 [==============================] - ETA: 0s - loss: 35.42761/1 [==============================] - 28s 28s/step - loss: 35.4276
+Epoch 30/100
+1/1 [==============================] - ETA: 0s - loss: 35.44101/1 [==============================] - 28s 28s/step - loss: 35.4410
+Epoch 31/100
+1/1 [==============================] - ETA: 0s - loss: 35.45571/1 [==============================] - 27s 27s/step - loss: 35.4557
+Epoch 32/100
+1/1 [==============================] - ETA: 0s - loss: 35.42151/1 [==============================] - 28s 28s/step - loss: 35.4215
+Epoch 33/100
+1/1 [==============================] - ETA: 0s - loss: 35.35411/1 [==============================] - 29s 29s/step - loss: 35.3541
+Epoch 34/100
+1/1 [==============================] - ETA: 0s - loss: 35.30041/1 [==============================] - 28s 28s/step - loss: 35.3004
+Epoch 35/100
+/var/spool/slurmd/job14121/slurm_script: line 21: 253172 Killed                  python /home/lthoma21/BFE-Loss-Function/FINAL-PDBBIND-FILES/test2_pdbbind_10_structures.py
+Job completed at Tue Aug  5 18:11:23 PDT 2025
+slurmstepd: error: Detected 1 oom-kill event(s) in StepId=14121.batch. Some of your processes may have been killed by the cgroup out-of-memory handler.
