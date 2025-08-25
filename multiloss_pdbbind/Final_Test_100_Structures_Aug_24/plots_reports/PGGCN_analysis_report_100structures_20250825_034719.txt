@@ -1,0 +1,40 @@
+
+PGGCN Training Results - Comprehensive Report
+============================================
+
+Experiment Details:
+- Dataset Size: 100 structures  
+- Training Date: 20250825_034719
+- Total Runtime: 539.78 minutes
+- Physics Weights Tested: 5
+
+Best Model Performance:
+- Optimal Physics Weight (λ): 1.00e-06
+- Test Loss: 20.723198
+- Training Loss: 34.992455
+- Mean Absolute Error: 9.238547
+- Training Epochs: 32
+
+Model Configuration:
+- Batch Size: 8
+- Max Padding: 3000 atoms
+- Memory Limit: 32 GB
+
+Performance Analysis:
+1. Training Curves: Shows convergence behavior and learning dynamics
+2. Physics Analysis: Demonstrates optimal physics weight selection
+3. Prediction Accuracy: Evaluates model predictions vs true values
+4. Error Analysis: Analyzes prediction error distributions
+5. Data Distribution: Examines train/test data characteristics
+
+Generated Visualizations:
+- training_curves: Loss curves and convergence analysis
+- physics_analysis: Physics hyperparameter optimization
+- prediction_analysis: Scatter plots and residual analysis
+- error_distributions: Error histograms and normality tests
+- data_distributions: Data and prediction distributions
+
+Recommendations:
+- Best physics weight: 1.00e-06
+- Model shows moderate generalization
+- Training converged well
